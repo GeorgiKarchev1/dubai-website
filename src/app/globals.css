@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+:root {
+  --gold: #C9A96E;
+  --gold-light: #E8D5A3;
+  --gold-dark: #9A7A4A;
+  --black: #0A0A0A;
+  --dark: #111111;
+  --dark2: #1A1A1A;
+  --dark3: #242424;
+  --wa: #25D366;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--black);
+  color: #FAFAFA;
+  overflow-x: hidden;
+}
+
+@keyframes waPulse {
+  0%, 100% { box-shadow: 0 4px 24px rgba(37,211,102,0.4); }
+  50%       { box-shadow: 0 4px 40px rgba(37,211,102,0.7), 0 0 0 12px rgba(37,211,102,0.08); }
+}
+@keyframes scrollLine {
+  0%, 100% { transform: scaleY(1); transform-origin: top; }
+  50%       { transform: scaleY(0.3); transform-origin: bottom; }
+}
+
+.animate-wa-pulse   { animation: waPulse 3s ease-in-out infinite; }
+.animate-scroll-line { animation: scrollLine 2s ease-in-out infinite; }
